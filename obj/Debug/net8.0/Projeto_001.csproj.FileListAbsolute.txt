@@ -1,0 +1,14 @@
+/home/davi/Programas/Projeto_001/bin/Debug/net8.0/Projeto_001
+/home/davi/Programas/Projeto_001/bin/Debug/net8.0/Projeto_001.deps.json
+/home/davi/Programas/Projeto_001/bin/Debug/net8.0/Projeto_001.runtimeconfig.json
+/home/davi/Programas/Projeto_001/bin/Debug/net8.0/Projeto_001.dll
+/home/davi/Programas/Projeto_001/bin/Debug/net8.0/Projeto_001.pdb
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.GeneratedMSBuildEditorConfig.editorconfig
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.AssemblyInfoInputs.cache
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.AssemblyInfo.cs
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.csproj.CoreCompileInputs.cache
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.dll
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/refint/Projeto_001.dll
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.pdb
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.genruntimeconfig.cache
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/ref/Projeto_001.dll
