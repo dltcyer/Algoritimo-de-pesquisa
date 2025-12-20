@@ -12,3 +12,4 @@
 /home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.pdb
 /home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.genruntimeconfig.cache
 /home/davi/Programas/Projeto_001/obj/Debug/net8.0/ref/Projeto_001.dll
+/home/davi/Programas/Projeto_001/obj/Debug/net8.0/Projeto_001.sourcelink.json

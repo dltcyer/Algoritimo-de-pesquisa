@@ -1,6 +1,6 @@
 class Dados
 {
-    public static string[] Produtos = new string[100];
+    public static string[] Produtos = new string[150];
     public static void IniciarValores()
     {
         Produtos[0] = "teclado";

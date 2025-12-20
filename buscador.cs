@@ -2,7 +2,7 @@ class buscador
 {
     public static string[] buscar(string valorA, string[] valorB)
     {
-        string[] lista = new string[10];
+        string[] lista = new string[999999];
 
         for (int i = 0; i < valorB.Length; i++)
         {
