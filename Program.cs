@@ -1,26 +1,26 @@
 ﻿class Program
 {
+    private static Dados _dadosService = new Dados();
+
     public static string inicio()
     {
-
         Console.WriteLine("Olá, bem vindo ao buscador");
         Console.WriteLine("O que você deseja fazer?");
-        Console.WriteLine("1: Adicionar item");
-        Console.WriteLine("2: Buscar Item");
+        Console.WriteLine("1: Buscar item");
+        Console.WriteLine("2: Adicionar Item");
         string valor = Console.ReadLine();
         pesquisa_inicio(valor);
         return valor;
     }
+
     public static string pesquisa_inicio(string valor)
     {
-        Dados.IniciarValores();
-
-        string[] produtos = Dados.Produtos;
-
         switch (valor)
         {
             case "1":
-                Console.WriteLine("Qual produto você está preocurando: ");
+                Dados serviceDados = new Dados();
+                string[] produtos = serviceDados.IniciarValores();
+                Console.WriteLine("Qual produto você está procurando: ");
                 string valor_pesquisa = Console.ReadLine();
                 int valores = 0;
                 Console.Clear();
@@ -31,7 +31,6 @@
                     if (valorBusca[i] == null)
                     {
                         continue;
-
                     }
                     Console.WriteLine(valorBusca[i]);
                     valores++;
@@ -51,14 +50,41 @@
                 inicio();
                 break;
             case "2":
+                string[] produtos_case2 = _dadosService.IniciarValores();
+
+                Console.WriteLine("Qual produto gostaria de adicionar");
+                string resposta = Console.ReadLine();
+
+                bool adicionado = false;
+                for (int i = 0; i < produtos_case2.Length; i++)
+                {
+                    if (produtos_case2[i] == null)
+                    {
+                        produtos_case2[i] = resposta;
+                        adicionado = true;
+                        Console.WriteLine($"Produto '{resposta}' adicionado!");
+
+                        _dadosService.alterarValor(produtos_case2);
+
+                        break;
+                    }
+                }
+
+                if (!adicionado)
+                {
+                    Console.WriteLine("Não há espaço disponível.");
+                }
+
+                Console.ReadKey();
+                Console.Clear();
+                inicio();
                 break;
         }
         return " ";
     }
+
     static void Main(string[] args)
     {
         inicio();
-
-
     }
 }
