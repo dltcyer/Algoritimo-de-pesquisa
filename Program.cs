@@ -4,6 +4,7 @@
 
     public static string inicio()
     {
+        Console.Clear();
         Console.WriteLine("Olá, bem vindo ao buscador");
         Console.WriteLine("O que você deseja fazer?");
         Console.WriteLine("1: Buscar item");
@@ -28,10 +29,8 @@
 
                 for (int i = 0; i < valorBusca.Length; i++)
                 {
-                    if (valorBusca[i] == null)
-                    {
-                        continue;
-                    }
+                    if (valorBusca[i] == null) continue;
+
                     Console.WriteLine(valorBusca[i]);
                     valores++;
                 }
@@ -41,11 +40,8 @@
                 string valor2 = Console.ReadLine();
                 switch (valor2)
                 {
-                    case "s":
-                        Console.Clear();
-                        break;
-                    case "n":
-                        return " ";
+                    case "s": Console.Clear(); break;
+                    case "n": return " ";
                 }
                 inicio();
                 break;
@@ -70,10 +66,8 @@
                     }
                 }
 
-                if (!adicionado)
-                {
-                    Console.WriteLine("Não há espaço disponível.");
-                }
+                if (!adicionado) Console.WriteLine("Não há espaço disponível.");
+
 
                 Console.ReadKey();
                 Console.Clear();
