@@ -20,18 +20,18 @@
         {
             case "1":
                 Dados serviceDados = new Dados();
-                string[] produtos = serviceDados.IniciarValores();
+                Produto[] produtos = serviceDados.IniciarValores();
                 Console.WriteLine("Qual produto você está procurando: ");
                 string valor_pesquisa = Console.ReadLine();
                 int valores = 0;
                 Console.Clear();
-                string[] valorBusca = buscador.buscar(valor_pesquisa, produtos);
+                Produto[] valorBusca = buscador.buscar(valor_pesquisa, produtos);
 
                 for (int i = 0; i < valorBusca.Length; i++)
                 {
                     if (valorBusca[i] == null) continue;
 
-                    Console.WriteLine(valorBusca[i]);
+                    Console.WriteLine(valorBusca[i].nome);
                     valores++;
                 }
                 Console.WriteLine("Valores encontrados: " + valores);
@@ -46,22 +46,28 @@
                 inicio();
                 break;
             case "2":
-                string[] produtos_case2 = _dadosService.IniciarValores();
-
+                Produto[] produtos_case2 = _dadosService.IniciarValores();
+                for (int i = 0; i < produtos_case2.Length; i++)
+                {
+                    if (produtos_case2[i] != null)
+                    {
+                        Console.WriteLine(produtos_case2[i].nome);
+                    }
+                }
                 Console.WriteLine("Qual produto gostaria de adicionar");
                 string resposta = Console.ReadLine();
-
+                string precoString = Console.ReadLine();
+                decimal preco = Convert.ToDecimal(precoString);
                 bool adicionado = false;
                 for (int i = 0; i < produtos_case2.Length; i++)
                 {
                     if (produtos_case2[i] == null)
                     {
-                        produtos_case2[i] = resposta;
-                        adicionado = true;
+                        produtos_case2[i] = new Produto(i, resposta, preco);
+
                         Console.WriteLine($"Produto '{resposta}' adicionado!");
-
                         _dadosService.alterarValor(produtos_case2);
-
+                        adicionado = true;
                         break;
                     }
                 }

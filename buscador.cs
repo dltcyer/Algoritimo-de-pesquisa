@@ -1,26 +1,29 @@
 class buscador
 {
-    public static string[] buscar(string valorA, string[] valorB)
+    public static Produto[] buscar(string valorA, Produto[] valorB)
     {
-        string[] lista = new string[999999];
-
+        Produto[] lista = new Produto[999];
         for (int i = 0; i < valorB.Length; i++)
         {
-            if (valorB[i] == null)
-            {
+            if (valorB[i] == null || valorB[i].nome == null)
                 continue;
-            }
-            string valor = valorB[i];
-            string[] valorSespaco = valor.Split(' ');
 
-            for (int j = 0; j < valorSespaco.Length; j++)
+            string valorNome = valorB[i].nome;
+            string[] valorNome_semEspaco = valorNome.Split(" ");
+            if (valorNome_semEspaco.Length > 1)
             {
-                if (valorSespaco[j] == valorA && !lista.Contains(valorB[i]))
+                if (valorA == valorNome_semEspaco[0])
                 {
                     lista[i] = valorB[i];
                 }
             }
-
+            else
+            {
+                if (valorNome == valorA)
+                {
+                    lista[i] = valorB[i];
+                }
+            }
         }
         return lista;
     }
