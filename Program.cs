@@ -55,7 +55,8 @@
                     }
                 }
                 Console.WriteLine("Qual produto gostaria de adicionar");
-                string resposta = Console.ReadLine();
+                string nomeItem = Console.ReadLine();
+                Console.WriteLine("Qual o valor do produto você gostaria de adicionar");
                 string precoString = Console.ReadLine();
                 decimal preco = Convert.ToDecimal(precoString);
                 bool adicionado = false;
@@ -63,9 +64,9 @@
                 {
                     if (produtos_case2[i] == null)
                     {
-                        produtos_case2[i] = new Produto(i, resposta, preco);
+                        produtos_case2[i] = new Produto(i, nomeItem, preco);
 
-                        Console.WriteLine($"Produto '{resposta}' adicionado!");
+                        Console.WriteLine($"Produto '{nomeItem}' adicionado!");
                         _dadosService.alterarValor(produtos_case2);
                         adicionado = true;
                         break;
